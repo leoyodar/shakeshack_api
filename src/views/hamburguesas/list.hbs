@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row mt-5">
+        <h3 class="text-center text-uppercase p-2">Administrar Hamburguesas</h3>
+        {{#if hamburguesas}}
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Calorias</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        {{#each hamburguesas}}
+                            <tr>
+                                <td>{{id}}</td>
+                                <td>{{nombre}}</td>
+                                <td>{{descripcion}}</td>
+                                <td>{{calorias}}</td>
+                                <td>{{imagen}}</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="/edit/{{id}}" class="btn btn-warning p-2"><i class="fa-regular fa-pen-to-square"></i></a>
+                                        <a href="/delete/{{id}}" class="btn btn-danger p-2"><i class="fa-solid fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {{/each}}
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        {{else}}
+            <div class="card text-center mx-auto">
+                <div class="card-header">
+                    <h3>No hay registros</h3>
+                </div>
+                <div class="card-body">
+                    <p>Crea una nueva hamburguesa</p>
+                    <a href="/add" class="btn" style="background-color: #72AD54; color: #ffffff">Crear</a>
+                </div>
+            </div>
+        {{/if}}
+    </div>
+</div>

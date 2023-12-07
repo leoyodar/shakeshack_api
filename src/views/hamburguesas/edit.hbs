@@ -1,0 +1,34 @@
+<div class="container p-4">
+    <row>
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h3 class="text-uppercase">Editar hamburguesa</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/edit/{{hamburguesas.id}}" method="post">
+                    <div class="input-group mt-2 mb-3">
+                        <label for="nombre" class="input-group-text">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" value="{{hamburguesas.nombre}}" style="width: 70%;" placeholder="Nombre" autofocus required>
+                    </div>
+                     <div class="input-group mt-2 mb-3">
+                        <label for="descripcion" class="input-group-text">Descripcion</label>
+                        <input type="text" name="descripcion" id="descripcion" value="{{hamburguesas.descripcion}}" style="width: 70%;" placeholder="Descripcion" required>
+                    </div>
+                     <div class="input-group mt-2 mb-3">
+                        <label for="calorias" class="input-group-text">Calorias</label>
+                        <input type="text" name="calorias" id="calorias" value="{{hamburguesas.calorias}}" style="width: 70%;" placeholder="Calorias" required>
+                    </div>
+                     <div class="input-group mt-2">
+                        <label for="imagen" class="input-group-text">Imagen</label>
+                        <input type="text" name="imagen" id="imagen" value="{{hamburguesas.imagen}}" style="width: 70%;" placeholder="imagen" required>
+                    </div>
+                    <div class="form-group mt-4 d-grip gap-2">
+                        <button class="btn btn-success">Editar</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </row>
+</div>
